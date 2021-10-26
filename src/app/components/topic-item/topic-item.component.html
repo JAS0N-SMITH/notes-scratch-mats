@@ -1,0 +1,28 @@
+<div class="topic">
+  <mat-card class="topic-card">
+    <mat-card-title><h1>{{ topic.title | titlecase }}</h1></mat-card-title>
+    <mat-card-content><h3>{{ topic.description }}</h3></mat-card-content>
+  </mat-card>
+  <div class="message" *ngFor="let message of topic.messages">
+    <mat-card class="messages-card">
+      <mat-card-title>{{ message.title | titlecase }}</mat-card-title>
+      <mat-card-subtitle>{{ message.author }}</mat-card-subtitle>
+      <mat-card-content>{{ message.text }}</mat-card-content>
+    </mat-card>    
+  </div>
+</div>
+<!-- <table class="table">
+      <tr>
+        <td  *ngFor="let message of topic.messages">
+          <tr>
+            <b>{{ message.title | titlecase }}</b>
+          </tr>
+          <tr>
+            <em>{{ message.author }}</em>
+          </tr>
+          <tr>
+            <p>{{ message.text }}</p>
+          </tr>
+        </td>
+      </tr>
+    </table> -->
