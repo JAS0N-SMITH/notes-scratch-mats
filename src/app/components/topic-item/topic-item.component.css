@@ -1,24 +1,21 @@
-/* .topic{
-    margin-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+.add-message-button{
+  padding-bottom: 5px;
 }
 
-.message{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgrey;
-    text-align: center;
+.messages-buttons {
+  margin-left: 85%;
 }
 
-.table{
-    width: 100%;
+.messages-card {
+  max-width: 500px;
 }
 
-p{
-    margin: 8px;
-    text-align: left;
+.new-message-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
 }
- */
 
- .messages-card {
-    max-width: 400px;
-  }
+.new-message-full-width {
+  width: 100%;
+}

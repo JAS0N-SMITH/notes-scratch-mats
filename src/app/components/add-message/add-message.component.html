@@ -1,0 +1,36 @@
+<div class="add-message-button">
+  <span>
+    <button>
+      <mat-icon aria-label="Add new message" 
+        >add
+      </mat-icon>
+    </button>
+  </span>
+</div>
+<div *ngIf="showAddMessage">
+  <form class="new-message-form">
+    <div>
+      <mat-form-field class="new-message-full-width" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Message Title" value="" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="new-message-full-width" appearance="fill">
+        <mat-label>Author</mat-label>
+        <input matInput placeholder="Message Author" value="" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="new-message-full-width" appearance="fill">
+        <mat-label>Text</mat-label>
+        <textarea matInput placeholder="Message Text"></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="accent">
+        Add Message
+      </button>
+    </div>
+  </form>
+</div>

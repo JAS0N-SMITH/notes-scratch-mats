@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +8,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Output() btnClick = new EventEmitter()
+
   title: string = "Notes"
   dateTime: any = new Date();
+  showAdd!: boolean;
+  subscription: Subscription;
 
-  constructor() { }
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService
+      .onToggle()
+      .subscribe((value) => {
+        this.showAdd = value;
+      })
+   }
 
   ngOnInit(): void {
+  }
+
+  toggleAdd() {
+    this.uiService.toggleAdd();
+    console.log(`ToggleAdd clicked! ${this.showAdd}`);
   }
 
 }

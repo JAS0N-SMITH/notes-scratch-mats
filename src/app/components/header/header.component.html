@@ -1,4 +1,18 @@
 <header>
-    <h1>{{ title }}</h1>
-    <p>{{ dateTime.toDateString() }}</p>
+  <div>
+    <span class="title">
+      {{ title }}
+    </span>
+    <span class="add-topic-button">
+      <button>
+        <mat-icon 
+          aria-label="Add new note" 
+          (click)="toggleAdd()"
+          >add</mat-icon>
+      </button>
+    </span>
+    <span
+      ><p>{{ dateTime.toDateString() }}</p></span
+    >
+  </div>
 </header>

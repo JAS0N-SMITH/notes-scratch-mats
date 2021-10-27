@@ -1,0 +1,14 @@
+.button-containers {
+    padding: 10px;
+}
+
+.new-message-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px;
+}
+
+.new-message-full-width {
+  width: 100%;
+}
