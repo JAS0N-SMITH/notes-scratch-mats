@@ -26,8 +26,8 @@ export class MainComponent implements OnInit {
 
     this.subscription = this.uiService
       .onToggle()
-      .subscribe((bool: boolean) => {
-        this.showAddMessage = bool;
+      .subscribe((value: boolean) => {
+        this.showAddMessage = value;
       })
    }
 
