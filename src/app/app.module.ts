@@ -17,6 +17,7 @@ import { TopicsComponent } from './components/topics/topics.component';
 import { TopicItemComponent } from './components/topic-item/topic-item.component';
 import { AddMessageComponent } from './components/add-message/add-message.component';
 import { AddTopicComponent } from './components/add-topic/add-topic.component';
+import { MainComponent } from './components/main/main.component';
 
 
 
@@ -29,7 +30,8 @@ import { AddTopicComponent } from './components/add-topic/add-topic.component';
     TopicsComponent,
     TopicItemComponent,
     AddMessageComponent,
-    AddTopicComponent
+    AddTopicComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

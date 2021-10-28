@@ -3,77 +3,56 @@
     {
       "id": 1,
       "title": "sample topic",
-      "description": "This is a sample topic to get started",
-      "messages": [
-        {
-          "id": 1,
-          "title": "First message",
-          "author": "Jo Smo",
-          "text": "Welcome to my sample app!"
-        },
-        {
-          "id": 2,
-          "title": "Second message",
-          "author": "anonymous",
-          "text": "Some words of wisdom."
-        },
-        {
-          "id": 3,
-          "title": "Another message",
-          "author": "Albert Einstein",
-          "text": "E equals MxC squared."
-        }
-      ]
+      "description": "This is a sample topic to get started"
     },
     {
       "id": 2,
-      "title": "sample topic number two",
-      "description": "This is a sample topic to get started",
-      "messages": [
-        {
-          "id": 1,
-          "title": "First message",
-          "author": "Jo Smo",
-          "text": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin ut turpis eu dolor auctor lacinia. Integer non ipsum sapien. Morbi tristique laoreet tellus, ut iaculis felis vehicula id. Pellentesque bibendum eleifend nunc, sit amet posuere tellus pulvinar sit amet."
-        },
-        {
-          "id": 2,
-          "title": "Second message",
-          "author": "anonymous",
-          "text": "In lacinia urna vel ultricies accumsan. Ut maximus orci ac enim mollis, ut tempus erat luctus. Vestibulum sed dolor felis. Vestibulum et volutpat ligula. Nunc ornare interdum ante lobortis faucibus. Aenean viverra ante sed risus blandit condimentum. Donec semper ante justo, et tincidunt magna cursus nec. Duis auctor nibh neque, et semper ex viverra et. Proin lorem est, varius vel lobortis at, varius quis turpis. Suspendisse magna purus, varius non fringilla venenatis, accumsan et est. "
-        },
-        {
-          "id": 3,
-          "title": "Another message",
-          "author": "Albert Einstein",
-          "text": "In rhoncus, mauris non venenatis bibendum, mi velit elementum augue, ut dignissim nisl tellus eget metus. Praesent auctor feugiat lacus. Aenean non vestibulum ligula. Mauris tincidunt molestie nisi, vitae tincidunt leo semper vel. Maecenas at libero interdum, rutrum lacus nec, ornare lectus."
-        }
-      ]
+      "title": "Another topic",
+      "description": "And another thing ..."
+    }
+  ],
+  "messages": [
+    {
+      "id": 1001,
+      "topic": 1,
+      "title": "First message",
+      "author": "Jo Smo",
+      "text": "Welcome to my sample app!"
     },
     {
-      "id": 3,
-      "title": "sample topic number three",
-      "description": "This is a sample topic to get started",
-      "messages": [
-        {
-          "id": 1,
-          "title": "First message",
-          "author": "Jo Smo",
-          "text": "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin ut turpis eu dolor auctor lacinia. Integer non ipsum sapien. Morbi tristique laoreet tellus, ut iaculis felis vehicula id. Pellentesque bibendum eleifend nunc, sit amet posuere tellus pulvinar sit amet."
-        },
-        {
-          "id": 2,
-          "title": "Second message",
-          "author": "anonymous",
-          "text": "In lacinia urna vel ultricies accumsan. Ut maximus orci ac enim mollis, ut tempus erat luctus. Vestibulum sed dolor felis. Vestibulum et volutpat ligula. Nunc ornare interdum ante lobortis faucibus. Aenean viverra ante sed risus blandit condimentum. Donec semper ante justo, et tincidunt magna cursus nec. Duis auctor nibh neque, et semper ex viverra et. Proin lorem est, varius vel lobortis at, varius quis turpis. Suspendisse magna purus, varius non fringilla venenatis, accumsan et est. "
-        },
-        {
-          "id": 3,
-          "title": "Another message",
-          "author": "Albert Einstein",
-          "text": "In rhoncus, mauris non venenatis bibendum, mi velit elementum augue, ut dignissim nisl tellus eget metus. Praesent auctor feugiat lacus. Aenean non vestibulum ligula. Mauris tincidunt molestie nisi, vitae tincidunt leo semper vel. Maecenas at libero interdum, rutrum lacus nec, ornare lectus."
-        }
-      ]
+      "id": 1002,
+      "topic": 1,
+      "title": "Second message",
+      "author": "anonymous",
+      "text": "Some words of wisdom."
+    },
+    {
+      "id": 1003,
+      "topic": 1,
+      "title": "Another message",
+      "author": "Albert Einstein",
+      "text": "E equals MxC squared."
+    },
+    {
+      "id": 2001,
+      "topic": 2,
+      "title": "Wazzup",
+      "author": "JJ",
+      "text": "Tell me something good"
+    },
+    {
+      "id": 2002,
+      "topic": 2,
+      "title": "Coming attractions",
+      "author": "Sam",
+      "text": "Join us for some great events!"
+    },
+    {
+      "id": 2003,
+      "topic": 2,
+      "title": "ISO a good plumber",
+      "author": "L. Leaky",
+      "text": "Know anybody good with pipes?"
     }
   ]
 }
