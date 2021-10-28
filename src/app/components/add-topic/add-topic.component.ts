@@ -17,7 +17,6 @@ export class AddTopicComponent implements OnInit {
   ngOnInit(): void {}
   
   onSubmit() {
-    console.log("OnSubmit called");
     if(!this.id) {
       alert('Please add a id!');
       return;
@@ -32,10 +31,7 @@ export class AddTopicComponent implements OnInit {
       description: this.description
     };
 
-    console.log(newTopic);
     this.onAddNewTopic.emit(newTopic);
-    
-    // console.log(`onAddTopic.emit called ${this.onAddNewTopic.emit(newTopic)}`);
 
     this.id = this.id + 1;
     this.title = '';

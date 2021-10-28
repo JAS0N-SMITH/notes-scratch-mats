@@ -48,7 +48,6 @@ export class MainComponent implements OnInit {
   }
 
   addNewTopic(topic: Topic) {
-    console.log(`addNewTopic called ${topic}`);
     this.topicService.addTopic(topic).subscribe((topic: Topic) => {
       this.topics.push(topic);
     });
