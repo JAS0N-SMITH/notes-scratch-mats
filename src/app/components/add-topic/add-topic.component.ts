@@ -1,7 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { Message } from 'src/app/Message';
-import { UiService } from 'src/app/services/ui.service';
 import { Topic } from 'src/app/Topic';
 
 @Component({
@@ -10,41 +7,37 @@ import { Topic } from 'src/app/Topic';
   styleUrls: ['./add-topic.component.css'],
 })
 export class AddTopicComponent implements OnInit {
-  @Output() onAddTopic: EventEmitter<Topic> = new EventEmitter();
-
+  @Output() onAddNewTopic: EventEmitter<Topic> = new EventEmitter()
   id!: number;
   title!: string;
-  description!: string;
-  messages!: Message[];
-  showAddTopic!: boolean;
-  subscription: Subscription;
+  description!: string;  
 
-  constructor(private uiService: UiService) {
-    this.subscription = this.uiService
-      .onToggle()
-      .subscribe((value) => {
-      this.showAddTopic = value;
-    });
-  }
+  constructor() { }
 
   ngOnInit(): void {}
-
+  
   onSubmit() {
-    if (!this.title) {
-      alert('Please add a title.');
+    console.log("OnSubmit called");
+    if(!this.id) {
+      alert('Please add a id!');
+      return;
+    } else if(!this.title) {
+      alert('Please add a title!');
       return;
     }
-
+    
     const newTopic = {
       id: this.id,
       title: this.title,
-      description: this.description,
-      messages: this.messages,
+      description: this.description
     };
 
-    this.onAddTopic.emit(newTopic);
+    console.log(newTopic);
+    this.onAddNewTopic.emit(newTopic);
+    
+    // console.log(`onAddTopic.emit called ${this.onAddNewTopic.emit(newTopic)}`);
 
-    this.id = 0;
+    this.id = this.id + 1;
     this.title = '';
     this.description = '';
   }

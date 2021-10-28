@@ -13,14 +13,21 @@ import { UiService } from 'src/app/services/ui.service';
 export class MainComponent implements OnInit {
   topics: Topic[] = [];
   adding: boolean = true;
-  showAdd!: boolean;
+  showAddTopic!: boolean;
+  showAddMessage!: boolean;
   subscription: Subscription;
 
   constructor(private topicService: TopicService, private uiService: UiService) {
     this.subscription = this.uiService
       .onToggle()
       .subscribe((value: boolean) => {
-        this.showAdd = value;
+        this.showAddTopic = value;
+      });
+
+    this.subscription = this.uiService
+      .onToggle()
+      .subscribe((bool: boolean) => {
+        this.showAddMessage = bool;
       })
    }
 
@@ -33,6 +40,18 @@ export class MainComponent implements OnInit {
         })
       });
     })
+  }
+
+  toggleNewMessageComp(topic: Topic) {
+    this.uiService.toggleAddMsg();
+    console.log(JSON.stringify(topic))
+  }
+
+  addNewTopic(topic: Topic) {
+    console.log(`addNewTopic called ${topic}`);
+    this.topicService.addTopic(topic).subscribe((topic: Topic) => {
+      this.topics.push(topic);
+    });
   }
 
 }

@@ -1,49 +1,58 @@
-<form class="new-form">
-  <div>
-    <mat-form-field class="new-topic-full-width" appearance="fill">
-      <mat-label>Topic ID</mat-label>
-      <input matInput placeholder="Topic Id" value="" />
-    </mat-form-field>
+<form class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="id">Topic ID</label>
+    <input
+      type="number"
+      name="id"
+      [(ngModel)]="id"
+      id="id"
+      placeholder="Add Topic Id"
+    />
   </div>
-  <div>
-    <mat-form-field class="new-topic-full-width" appearance="fill">
-      <mat-label>Topic Title</mat-label>
-      <input matInput placeholder="Topic Title" value="" />
-    </mat-form-field>
+  <div class="form-control">
+    <label for="title">Topic Title</label>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="title"
+      id="title"
+      placeholder="Add Topic Title"
+    />
   </div>
-  <div>
-    <mat-form-field class="new-topic-full-width" appearance="fill">
-      <mat-label>Topic Description</mat-label>
-      <textarea matInput placeholder="Topic Description"></textarea>
-    </mat-form-field>
-  </div>  
-  <div>
-    <mat-form-field class="new-message-full-width" appearance="fill">
-      <mat-label>Message Id</mat-label>
-      <input matInput placeholder="Message Id" value="" />
-    </mat-form-field>
+  <div class="form-control">
+    <label for="description">Topic Description</label>
+    <input
+      type="text"
+      name="description"
+      [(ngModel)]="description"
+      id="description"
+      placeholder="Add Topic Description"
+    />
   </div>
-  <div>
-    <mat-form-field class="new-message-full-width" appearance="fill">
-      <mat-label>Title</mat-label>
-      <input matInput placeholder="Message Title" value="" />
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field class="new-message-full-width" appearance="fill">
-      <mat-label>Author</mat-label>
-      <input matInput placeholder="Message Author" value="" />
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field class="new-message-full-width" appearance="fill">
-      <mat-label>Text</mat-label>
-      <textarea matInput placeholder="Message Text"></textarea>
-    </mat-form-field>
-  </div>
-  <div>
-    <button mat-raised-button color="accent">
-      Add
-    </button>
-  </div>
+    <button type="submit" mat-raised-button color="accent">Add</button>
 </form>
+
+<!-- <div>
+  <mat-form-field class="new-message-full-width" appearance="fill">
+    <mat-label>Message Id</mat-label>
+    <input matInput placeholder="Message Id" value="" />
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field class="new-message-full-width" appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="Message Title" value="" />
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field class="new-message-full-width" appearance="fill">
+    <mat-label>Author</mat-label>
+    <input matInput placeholder="Message Author" value="" />
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field class="new-message-full-width" appearance="fill">
+    <mat-label>Text</mat-label>
+    <textarea matInput placeholder="Message Text"></textarea>
+  </mat-form-field>
+</div> -->

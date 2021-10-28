@@ -12,23 +12,23 @@ export class HeaderComponent implements OnInit {
 
   title: string = "Notes"
   dateTime: any = new Date();
-  showAdd!: boolean;
+  showAddTopic!: boolean;
   subscription: Subscription;
 
   constructor(private uiService: UiService) {
     this.subscription = this.uiService
       .onToggle()
       .subscribe((value) => {
-        this.showAdd = value;
+        this.showAddTopic = value;
       })
    }
 
   ngOnInit(): void {
   }
 
-  toggleAdd() {
-    this.uiService.toggleAdd();
-    console.log(`ToggleAdd clicked! ${this.showAdd}`);
+  toggleAddTopic() {
+    this.uiService.toggleAddTopic();
+    console.log(`ToggleAddTopic clicked! ${this.showAddTopic}`);
   }
 
 }

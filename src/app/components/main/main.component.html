@@ -1,9 +1,12 @@
-<div *ngIf="!showAdd" class="top-div">
+<div *ngIf="!showAddTopic" class="top-div">
   <div *ngFor="let topic of topics">
     <div class="topic">
       <mat-card class="topic-card">
         <mat-card-title>
           {{ topic.title | titlecase }}
+          <button (click)="toggleNewMessageComp(topic)">
+            <mat-icon aria-label="Edit this message">add</mat-icon>
+          </button>
         </mat-card-title>
         <mat-card-content>{{ topic.description }}</mat-card-content>
         <div class="message" *ngFor="let message of topic.messages">
@@ -25,6 +28,12 @@
     </div>
   </div>
 </div>
-<div *ngIf="showAdd" class="add-div">
-    <app-add-topic></app-add-topic>
+<div *ngIf="showAddTopic" class="add-topic-div">
+  <app-add-topic (onAddNewTopic)="addNewTopic($event)"></app-add-topic>
 </div>
+<!-- <div *ngIf="showAddMessage">
+  <div class="add-msg-div">
+    <p>Add Msg Here</p>
+    <app-add-message></app-add-message>
+  </div>
+</div> -->

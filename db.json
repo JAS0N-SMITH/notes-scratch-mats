@@ -9,6 +9,16 @@
       "id": 2,
       "title": "Another topic",
       "description": "And another thing ..."
+    },
+    {
+      "id": 3,
+      "title": "New Topic",
+      "description": "Test topic post"
+    },
+    {
+      "id": 4,
+      "title": "Tessst",
+      "description": "This is a test"
     }
   ],
   "messages": [

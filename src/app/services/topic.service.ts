@@ -30,8 +30,8 @@ export class TopicService {
       WORK IN PROGRESS METHODS
   */
 
-  addNewTopic(topic: Topic): Observable<Topic> {
-    return this.http.post<Topic>(this.apiUrl, topic, httpOptions);
+  addTopic(topic: Topic): Observable<Topic> {
+    return this.http.post<Topic>(`${this.apiUrl}/topics`, topic, httpOptions);
   }
   
   addMessage(message: Message): Observable<Message> {
