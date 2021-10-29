@@ -51,6 +51,15 @@ export class MainComponent implements OnInit {
     this.topicService.addTopic(topic).subscribe((topic: Topic) => {
       this.topics.push(topic);
     });
+    this.showAddTopic = false;
+  }
+
+  editMessage(message: Message) {
+
+  }
+
+  deleteMessage(message: Message) {
+    
   }
 
 }

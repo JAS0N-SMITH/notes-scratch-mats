@@ -12,13 +12,13 @@
     },
     {
       "id": 3,
-      "title": "New Topic",
-      "description": "Test topic post"
+      "title": "Testing",
+      "description": "Testing description"
     },
     {
       "id": 4,
-      "title": "Tessst",
-      "description": "This is a test"
+      "title": "Test",
+      "description": "Test"
     }
   ],
   "messages": [
@@ -63,6 +63,13 @@
       "title": "ISO a good plumber",
       "author": "L. Leaky",
       "text": "Know anybody good with pipes?"
+    },
+    {
+      "id": 3001,
+      "topic": 3,
+      "title": "Testing",
+      "author": "Me",
+      "text": "This is a test new message."
     }
   ]
 }

@@ -8,7 +8,7 @@ export class UiService {
   private showAddTopic: boolean = false;
   private showAddMessage: boolean = false;
   private subject = new Subject<any>();
-  // private subjectAlt = new Subject<any>();
+  private subjectAlt = new Subject<any>();
   
   constructor() { }
 
@@ -19,7 +19,7 @@ export class UiService {
 
   toggleAddMsg(): void {
     this.showAddMessage = !this.showAddMessage;
-    this.subject.next(this.showAddMessage);
+    this.subjectAlt.next(this.showAddMessage);
   }  
 
   onToggle(): Observable<any> {

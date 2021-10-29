@@ -9,16 +9,20 @@
           </button>
         </mat-card-title>
         <mat-card-content>{{ topic.description }}</mat-card-content>
+        <div *ngIf="showAddMessage" class="add-msg-div">
+          <p>Add new message</p>
+          <app-add-message></app-add-message>
+        </div>
         <div class="message" *ngFor="let message of topic.messages">
           <mat-card class="messages-card">
             <mat-card-title>{{ message.title | titlecase }}</mat-card-title>
             <mat-card-subtitle>{{ message.author }}</mat-card-subtitle>
             <mat-card-content>{{ message.text }}</mat-card-content>
             <div class="messages-buttons">
-              <button>
+              <button (click)="editMessage(message)">
                 <mat-icon aria-label="Edit this message">edit</mat-icon>
               </button>
-              <button>
+              <button (click)="deleteMessage(message)">
                 <mat-icon aria-label="Delete this message">delete</mat-icon>
               </button>
             </div>

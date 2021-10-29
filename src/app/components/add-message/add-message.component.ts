@@ -10,6 +10,11 @@ import { UiService } from 'src/app/services/ui.service';
 })
 export class AddMessageComponent implements OnInit {
   
+  id!: number;
+  topic!: number;
+  title!: string;
+  author!: string;
+  text!: string;
   showAddMessage!: boolean;
   subscription: Subscription;
 
